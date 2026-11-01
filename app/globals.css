@@ -1,0 +1,231 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #f0f4f8;
+  color: #1a202c;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: #2b6cb0;
+}
+
+.srn {
+  font-size: 0.85rem;
+  color: #718096;
+  margin-bottom: 1.75rem;
+}
+
+/* ---------- View counter ---------- */
+.views-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #ebf8ff;
+  border: 1px solid #bee3f8;
+  color: #2c5282;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 1.75rem;
+}
+
+/* ---------- Form ---------- */
+.card {
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 0.9rem;
+}
+
+label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+input[type="text"],
+textarea {
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 0.4rem;
+  font-size: 0.95rem;
+  width: 100%;
+  transition: border-color 0.15s;
+  resize: vertical;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66,153,225,0.2);
+}
+
+.btn-primary {
+  background: #3182ce;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 0.4rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-primary:hover { background: #2b6cb0; }
+.btn-primary:disabled { background: #a0aec0; cursor: not-allowed; }
+
+.error-msg {
+  color: #c53030;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.success-msg {
+  color: #276749;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+/* ---------- Source badge ---------- */
+.source-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.source-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.source-badge.redis {
+  background: #fed7d7;
+  color: #9b2c2c;
+}
+
+.source-badge.postgres {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+/* ---------- Request list ---------- */
+.request-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.request-item {
+  background: #fff;
+  border-radius: 0.6rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.request-item.resolved {
+  opacity: 0.6;
+}
+
+.request-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.student-name {
+  font-weight: 600;
+  color: #2b6cb0;
+}
+
+.request-time {
+  font-size: 0.78rem;
+  color: #a0aec0;
+}
+
+.request-message {
+  font-size: 0.95rem;
+  color: #2d3748;
+  line-height: 1.5;
+}
+
+.status-pill {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+.status-pill.open {
+  background: #ebf8ff;
+  color: #2b6cb0;
+}
+
+.status-pill.resolved {
+  background: #f0fff4;
+  color: #276749;
+}
+
+.btn-resolve {
+  align-self: flex-end;
+  margin-top: 0.4rem;
+  background: transparent;
+  color: #276749;
+  border: 1px solid #68d391;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-resolve:hover { background: #f0fff4; }
+.btn-resolve:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.empty-msg {
+  text-align: center;
+  color: #718096;
+  padding: 2rem 0;
+  font-size: 0.95rem;
+}
